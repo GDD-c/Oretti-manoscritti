@@ -47,6 +47,85 @@
   <div class="container">
     <div id="map"></div>
   </div>
+  <script>
+  // Inizializza la mappa centrata su Bologna
+  const map = L.map('map').setView([44.4933, 11.3300], 15);
+
+  // Aggiungi i tiles di OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Marker per opere in Strada del Pratello (coordinate indicative)
+  const opere = [
+    {
+      titolo: "loggia e scalone",
+      autore: "Dotti Francesco , architetto",
+      link: "item-opera-001.html"
+    },
+    {
+      titolo: "B. Vergine tiene il Bambino",
+      autore: "Tibaldi Pellegrino",
+      link: "item-opera-002.html"
+    },
+    {
+      titolo: "Figura femminile che suona un liuto",
+      autore: "Cagliari Carlo",
+      link: "item-opera-003.html"
+    },
+    {
+      titolo: "B. Vergine tiene il Bambino",
+      autore: "Brizio Francesco",
+      link: "item-opera-004.html"
+    },
+    {
+      titolo: "B. Vergine che da il Bambino a S. Francesco",
+      autore: "Faccini Pietro",
+      link: "item-opera-005.html"
+    },
+    {
+      titolo: "S. Anna con la B.V.",
+      autore: "Scarsellino Ippolito",
+      link: "item-opera-006.html"
+    },
+    {
+      titolo: "mezza figura di giovinetta con le mani giunte",
+      autore: "Brizio Francesco",
+      link: "item-opera-007.html"
+    },
+    {
+      titolo: "S.Agostino, S. Romualdo, S. Francesco",
+      autore: "Carracci Ludovico",
+      link: "item-opera-008.html"
+    },
+    {
+      titolo: "S. Michele Arcangelo che scaccia li Demoni",
+      autore: "Carracci Agostino",
+      link: "item-opera-009.html"
+    },
+    {
+      titolo: "S. Giuseppe che tiene il Bambino",
+      autore: "Reni Guido",
+      link: "item-opera-010.html"
+    },
+    {
+      titolo: "mezza figura di donna",
+      autore: "Parmigianino",
+      link: "item-opera-011.html"
+    },
+    {
+      titolo: "S. Maria Maddalena",
+      autore: "Parmigianino",
+      link: "item-opera-012.html"
+    }
+  ];
+
+  // Aggiungi un marker per ogni opera
+  opere.forEach(opera => {
+    L.marker([44.4933, 11.3300]).addTo(map)
+      .bindPopup(`<strong>${opera.titolo}</strong><br><em>${opera.autore}</em><br><a href="${opera.link}">Vai alla scheda →</a>`);
+  });
+</script>
 
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3">
