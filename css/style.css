@@ -168,3 +168,18 @@ img {
   color: #f4e3c1; /* Avorio chiaro elegante */
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Leggibilità sullo sfondo */
 }
+.btn-primary {
+  background-color: #5a5145;
+  border-color: #5a5145;
+}
+
+.btn-primary:hover {
+  background-color: #7c715f;
+  border-color: #7c715f;
+}
+
+.btn-outline-light:hover {
+  background-color: #f4e3c1;
+  color: #2b2b2b;
+}
+
