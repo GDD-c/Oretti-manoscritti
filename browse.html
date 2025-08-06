@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navigazione - Collezioni Oretti</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Oretti Collection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link active" href="browse.html">Navigazione</a></li>
+          <li class="nav-item"><a class="nav-link" href="item.html">Esempio Item</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Titolo -->
+  <div class="container py-5">
+    <h1 class="mb-4">Navigazione per Filtri</h1>
+
+    <!-- Accordion con filtri -->
+    <div class="accordion mb-5" id="filtersAccordion">
+      <!-- Filtro Autore -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAuthor">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuthor">
+            Filtra per Autore
+          </button>
+        </h2>
+        <div id="collapseAuthor" class="accordion-collapse collapse show" data-bs-parent="#filtersAccordion">
+          <div class="accordion-body">
+            <select class="form-select" aria-label="Filtro Autore">
+              <option selected>Seleziona un autore</option>
+              <option value="oretti">Marcello Oretti</option>
+              <option value="guercino">Guercino</option>
+              <option value="cignani">Carlo Cignani</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtro Opera -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOpera">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOpera">
+            Filtra per Opera
+          </button>
+        </h2>
+        <div id="collapseOpera" class="accordion-collapse collapse" data-bs-parent="#filtersAccordion">
+          <div class="accordion-body">
+            <select class="form-select" aria-label="Filtro Opera">
+              <option selected>Seleziona un'opera</option>
+              <option value="b104">Manoscritto B104</option>
+              <option value="b109">Manoscritto B109</option>
+              <option value="b110">Manoscritto B110</option>
+              <option value="guercino">Dipinto del Guercino</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filtro Luogo -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPlace">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlace">
+            Filtra per Luogo
+          </button>
+        </h2>
+        <div id="collapsePlace" class="accordion-collapse collapse" data-bs-parent="#filtersAccordion">
+          <div class="accordion-body">
+            <select class="form-select" aria-label="Filtro Luogo">
+              <option selected>Seleziona un luogo</option>
+              <option value="bologna">Bologna</option>
+              <option value="archiginnasio">Biblioteca Archiginnasio</option>
+              <option value="zambeccari">Palazzo Zambeccari</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risultati filtrati (statici per ora) -->
+    <h2 class="mb-3">Risultati</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="images/b104.jpg" class="card-img-top" alt="B104">
+          <div class="card-body">
+            <h5 class="card-title">Manoscritto B104</h5>
+            <p class="card-text">Marcello Oretti, Biblioteca Archiginnasio</p>
+            <a href="item.html?id=b104" class="btn btn-outline-primary">Visualizza</a>
+          </div>
+        </div>
+      </div>
+      <!-- Altri item da popolare dinamicamente in futuro -->
+    </div>
+
+    <!-- Mappa linkata -->
+    <div class="text-center my-5" id="map">
+      <h2 class="mb-3">Esplora sulla Mappa</h2>
+      <a href="https://leafletjs.com/examples/quick-start/" target="_blank" class="btn btn-success">
+        Apri la Mappa Interattiva
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p class="mb-0">© 2025 - Navigazione collezioni | Biblioteca dell’Archiginnasio</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
