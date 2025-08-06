@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mappa Interattiva - Bologna XVIII sec.</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    #map {
+      height: 600px;
+      margin: 2rem 0;
+      border: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Oretti Collection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html">Navigazione</a></li>
+          <li class="nav-item"><a class="nav-link active" href="map.html">Mappa</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Titolo -->
+  <div class="container text-center py-4">
+    <h1>Mappa Interattiva delle Collezioni</h1>
+    <p class="lead">Luoghi citati nei manoscritti di Marcello Oretti - Bologna XVIII secolo</p>
+  </div>
+
+  <!-- Mappa -->
+  <div class="container">
+    <div id="map"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p class="mb-0">© 2025 - Bologna Storica | Progetto Digital Humanities</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Script per la mappa -->
+  <script>
+    // Inizializza la mappa centrata su Bologna
+    var map = L.map('map').setView([44.4949, 11.3426], 14);
+
+    // Aggiungi base map da OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map © OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marker 1 – Archiginnasio
+    L.marker([44.4906, 11.3442])
+      .addTo(map)
+      .bindPopup('<strong>Biblioteca dell’Archiginnasio</strong><br>Manoscritti B104, B109, B110')
+      .openPopup();
+
+    // Marker 2 – Palazzo Zambeccari
+    L.marker([44.4940, 11.3448])
+      .addTo(map)
+      .bindPopup('<strong>Palazzo Zambeccari</strong><br><a href="item-guercino.html">Opera del Guercino</a>');
+
+    // Marker 3 – Chiesa dei Servi
+    L.marker([44.4947, 11.3574])
+      .addTo(map)
+      .bindPopup('<strong>Chiesa dei Servi</strong><br>Opera di Francesco Albani');
+
+  </script>
+</body>
+</html>
