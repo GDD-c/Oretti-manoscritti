@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Collezioni d'Arte a Bologna - XVIII secolo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collezioni d'Arte a Bologna - Oretti</title>
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Dublin Core metadata (head) -->
-  <meta name="DC.title" content="Collezioni d'Arte a Bologna nel XVIII secolo">
+  <!-- Dublin Core -->
+  <meta name="DC.title" content="Collezioni d’Arte a Bologna nel XVIII secolo">
   <meta name="DC.creator" content="Marcello Oretti">
-  <meta name="DC.subject" content="Storia dell'arte, Bologna, manoscritti, mappe, collezioni d'arte">
   <meta name="DC.language" content="it">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Oretti Collection</a>
+      <a class="navbar-brand" href="index.html">Oretti Collection</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,72 +28,82 @@
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Catalogo</a></li>
           <li class="nav-item"><a class="nav-link" href="browse.html">Navigazione</a></li>
-          <li class="nav-item"><a class="nav-link" href="item.html">Esempio Item</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero section -->
-  <header class="bg-light text-dark py-5">
-    <div class="container text-center">
-      <h1 class="display-5 fw-bold">Collezioni d'Arte a Bologna nel XVIII secolo</h1>
-      <p class="lead">Un archivio digitale di manoscritti, opere e mappe tratte dai lavori di Marcello Oretti.</p>
-      <a href="catalog.html" class="btn btn-primary mt-3">Esplora il Catalogo</a>
+  <header class="text-center text-dark my-hero">
+    <div class="container py-5">
+      <h1 class="display-4">Collezioni d'Arte a Bologna nel XVIII secolo</h1>
+      <p class="lead">Un'esplorazione digitale dei manoscritti di Marcello Oretti conservati all’Archiginnasio.</p>
     </div>
   </header>
 
-  <!-- Anteprima risorse -->
+  <!-- Sezione intro -->
   <section class="container py-5">
-    <h2 class="mb-4">In evidenza</h2>
-    <div class="row g-4">
-      <!-- Card manoscritti -->
+    <h2>Il progetto</h2>
+    <p>
+      Questo sito presenta una raccolta digitalizzata e descritta dei manoscritti B104, B109 e B110 di <strong>Marcello Oretti</strong>,
+      importante erudito e collezionista bolognese del Settecento. I suoi scritti testimoniano la ricchezza delle collezioni artistiche private a Bologna,
+      fornendo preziose informazioni su autori, opere e luoghi.
+    </p>
+    <p>
+      La navigazione è possibile per <strong>autore</strong>, <strong>opera</strong> e <strong>luogo</strong>, con supporto di mappe e immagini per esplorare il contesto storico e culturale della città.
+    </p>
+  </section>
+
+  <!-- Sezione anteprima catalogo -->
+  <section class="container pb-5">
+    <h2>Scopri i contenuti</h2>
+    <div class="row g-4 pt-3">
+
+      <!-- Anteprima item -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/manoscritto.jpg" class="card-img-top" alt="Manoscritto B104">
+          <img src="images/b104.jpg" class="card-img-top" alt="Manoscritto B104">
           <div class="card-body">
             <h5 class="card-title">Manoscritto B104</h5>
-            <p class="card-text">Uno dei tre manoscritti di Marcello Oretti conservati all’Archiginnasio.</p>
-            <a href="item.html" class="btn btn-outline-primary">Scopri di più</a>
+            <p class="card-text">Collezioni d’arte private bolognesi.</p>
+            <a href="item-b104.html" class="btn btn-outline-primary">Scopri</a>
           </div>
         </div>
       </div>
 
-      <!-- Card immagini -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/quadro.jpg" class="card-img-top" alt="Quadro antico">
+          <img src="images/guercino.jpg" class="card-img-top" alt="Opera del Guercino">
           <div class="card-body">
-            <h5 class="card-title">Quadro citato</h5>
-            <p class="card-text">Una delle opere pittoriche citate nei manoscritti: autore e collezionista.</p>
-            <a href="catalog.html" class="btn btn-outline-primary">Visualizza opera</a>
+            <h5 class="card-title">Opera del Guercino</h5>
+            <p class="card-text">Dipinto documentato da Oretti a Bologna.</p>
+            <a href="item-guercino.html" class="btn btn-outline-primary">Scopri</a>
           </div>
         </div>
       </div>
 
-      <!-- Card mappa -->
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="images/mappa-bologna.jpg" class="card-img-top" alt="Mappa Bologna XVIII secolo">
+          <img src="images/map-thumb.jpg" class="card-img-top" alt="Mappa storica di Bologna">
           <div class="card-body">
-            <h5 class="card-title">Mappa di Bologna</h5>
-            <p class="card-text">Mappa storica interattiva della città di Bologna nel Settecento.</p>
-            <a href="browse.html" class="btn btn-outline-primary">Esplora la mappa</a>
+            <h5 class="card-title">Mappa interattiva</h5>
+            <p class="card-text">Esplora i luoghi citati nei manoscritti.</p>
+            <a href="browse.html#map" class="btn btn-outline-primary">Visualizza</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
-      <p class="mb-0">© 2025 - Progetto di digitalizzazione a cura di [Tuo Nome]</p>
-      <small>Biblioteca Comunale dell’Archiginnasio | Corso di Digital Humanities</small>
+      <p class="mb-0">© 2025 - Progetto Digital Humanities | Università di Bologna</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
