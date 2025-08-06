@@ -116,3 +116,12 @@ img {
     font-size: 1rem;
   }
 }
+/* Sezione esplora */
+.explore-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
