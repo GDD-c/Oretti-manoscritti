@@ -1,27 +1,32 @@
-/* ------------------------
-   CSS Personalizzato - Collezioni Oretti
------------------------- */
+/* -------------------------------
+   STILE PERSONALIZZATO - Collezioni Oretti
+--------------------------------*/
 
-/* Tipografia */
+/* Corpo del sito */
 body {
   font-family: 'Georgia', serif;
   font-size: 1.05rem;
-  line-height: 1.6;
+  line-height: 1.7;
   background-color: #fdfcf9;
   color: #2b2b2b;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2, h3, h4 {
+/* Titoli */
+h1, h2, h3, h4, .navbar-brand {
   font-family: 'Times New Roman', serif;
   color: #3e2d18;
 }
 
+/* Link */
 a {
   color: #5c3d1e;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+  color: #3e2d18;
 }
 
 /* Navbar */
@@ -30,52 +35,84 @@ a:hover {
 }
 .navbar-brand {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
-/* Hero / Header */
+/* Header */
 header {
   background-image: url('../images/texture-paper.jpg');
   background-size: cover;
   background-position: center;
-  color: #2b2b2b;
-  text-shadow: 1px 1px 1px #ffffff;
+  padding: 4rem 0;
+  text-shadow: 1px 1px 2px #fff;
 }
 
-/* Card personalizzate */
+/* Hero Text */
+header h1 {
+  font-size: 2.5rem;
+}
+header p {
+  font-size: 1.2rem;
+}
+
+/* Sezioni */
+.container {
+  max-width: 1200px;
+}
+
+/* Card */
 .card {
   border: none;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .card-title {
-  font-size: 1.1rem;
   color: #3e2d18;
+  font-weight: bold;
 }
 
-/* Aside item correlati */
+/* Aside */
 aside {
   border-left: 4px solid #cbb279;
-  padding-left: 1rem;
   background-color: #f7f3eb;
+  padding: 1rem;
 }
 
 /* Footer */
 footer {
-  font-size: 0.9rem;
   background-color: #2b2b2b;
   color: #f0f0f0;
+  font-size: 0.9rem;
 }
 
-/* Responsive image margins */
+/* Immagini */
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 4px;
   margin-bottom: 1rem;
 }
 
-/* Utility */
-.my-hero {
-  background-color: #f0e6d6;
-  padding: 3rem 0;
+/* Mappa */
+#map {
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Responsive Padding */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
 }
