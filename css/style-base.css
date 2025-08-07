@@ -13,6 +13,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.hero-banner {
+  background-color: #f2f0eb;
+  padding: 6rem 1rem;
+}
+
+.hero-banner h1 {
+  font-size: 2.5rem;
+  color: #3e2d18;
+}
+
+.hero-banner p {
+  font-size: 1.25rem;
+  color: #5c3d1e;
+}
 
 h1, h2, h3, h4, h5 {
   font-family: 'Times New Roman', serif;
