@@ -40,6 +40,13 @@ header {
   background-position: center;
   color: #2b2b2b;
   text-shadow: 1px 1px 1px #ffffff;
+ }
+.hero-banner {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
 }
 
 /* Card personalizzate */
