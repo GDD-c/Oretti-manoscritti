@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Mappa Interattiva - Collezioni a Bologna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 90vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Inizializza la mappa centrata su Bologna
+  var map = L.map('map').setView([44.4949, 11.3426], 14);
+
+  // Aggiunge il layer di base
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Marker per Palazzo Sampieri
+  L.marker([44.4944, 11.3439]).addTo(map)
+    .bindPopup('<strong>Palazzo Sampieri</strong><br>Via S. Stefano');
+
+  // Marker per Palazzo Hercolani
+  L.marker([44.4938, 11.3463]).addTo(map)
+    .bindPopup('<strong>Palazzo Hercolani</strong><br>Strada Maggiore');
+
+  // Marker per Palazzo Isolani
+  L.marker([44.4946, 11.3454]).addTo(map)
+    .bindPopup('<strong>Palazzo Isolani</strong><br>Piazza S. Stefano');
+
+  // Marker per Palazzo Marescotti
+  L.marker([44.4962, 11.3411]).addTo(map)
+    .bindPopup('<strong>Palazzo Marescotti</strong><br>Via Barberia');
+</script>
+
+</body>
+</html>
