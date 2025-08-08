@@ -92,3 +92,7 @@ footer {
     font-size: 1.1rem;
   }
 }
+/* Effetto scroll fluido per "torna su" */
+html {
+  scroll-behavior: smooth;
+}
