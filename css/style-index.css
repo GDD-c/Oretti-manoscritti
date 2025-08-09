@@ -38,6 +38,32 @@ a:hover {
   font-size: 1.25rem;
   color: #5c3d1e;
 }
+/* box categoria con immagine di sfondo */
+.category-box{
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; color: #fff;
+}
+.category-box::before{
+  content:""; position:absolute; inset:0;
+  background: rgba(0,0,0,.45);
+}
+.category-box > div{ position: relative; z-index: 1; }
+
+/* percorsi corretti (CSS in /css -> immagini in /images) */
+.cat-opere         { background-image: url('../images/bg-opere.jpg'); }
+.cat-autori        { background-image: url('../images/bg-autori.jpg'); }
+.cat-collezionisti { background-image: url('../images/bg-collezionisti.jpg'); }
+.cat-mappa         { background-image: url('../images/bg-mappa.jpg'); }
+.cat-manoscritti   { background-image: url('../images/bg-manoscritti.jpg'); }
+
+/* piccolo hover (facoltativo) */
+.category-box:hover{ transform: translateY(-3px); transition: .25s ease; }
 
 /* Navigazione visiva - blocchi */
 section .container .row > div {
