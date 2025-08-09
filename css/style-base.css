@@ -29,6 +29,9 @@ body {
 }
 /* Categorie con immagine di sfondo */
 .category-block {
+  min-height: 220px;
+}
+.category-block {
   color: #fff;
   text-align: center;
   padding: 4rem 2rem;
