@@ -27,6 +27,48 @@ body {
   font-size: 1.25rem;
   color: #5c3d1e;
 }
+/* Categorie con immagine di sfondo */
+.category-block {
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-block h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.category-block p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.category-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Overlay scuro per leggibilità */
+.category-block::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.category-content {
+  position: relative;
+  z-index: 2;
+}
 
 h1, h2, h3, h4, h5 {
   font-family: 'Times New Roman', serif;
