@@ -51,6 +51,34 @@ a:hover {
 section {
   padding: 4rem 0;
 }
+.category-box {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* overlay scuro */
+}
+
+.category-box div {
+  position: relative; /* per stare sopra l'overlay */
+  z-index: 1;
+}
+
+/* Sfondi specifici */
+.cat-catalogo { background-image: url('images/bg-opere.jpg'); }
+.cat-autori { background-image: url('images/bg-autori.jpg'); }
+.cat-collezionisti { background-image: url('images/bg-collezionisti.jpg'); }
+.cat-mappa { background-image: url('images/bg-mappa.jpg'); }
+.cat-manoscritti { background-image: url('images/bg-manoscritti.jpg'); }
 
 /* Utilities */
 .text-center {
