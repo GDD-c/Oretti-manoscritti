@@ -1,24 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <title>Collezioni d’Arte a Bologna</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- I tuoi CSS -->
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-palette.css">
-    <link rel="stylesheet" href="css/typography.css">
+  <!-- CSS del sito -->
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-palette.css">
+  <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/style-index.css">
   <link rel="stylesheet" href="css/hero-banner-ampio.css">
 </head>
 <body>
- <!-- Navbar -->
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">I manoscritti di Marcello Oretti</a>
@@ -27,144 +30,137 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Catalogo</a></li>
           <li class="nav-item"><a class="nav-link" href="browse.html">Ricerca</a></li>
           <li class="nav-item"><a class="nav-link" href="map.html">Mappa</a></li>
         </ul>
       </div>
     </div>
   </nav>
-<!-- JS (va prima di </body>) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- HERO ESTESO CON IMMAGINE -->
-<section class="hero-banner-ampio text-white text-center d-flex align-items-center justify-content-center">
-  <div class="overlay"></div>
-  <div class="content container position-relative">
-    <h1 class="display-4 fw-semibold">Collezioni d’arte a Bologna nel XVIII secolo</h1>
-    <p class="lead mt-3">Notizie sul collezionismo bolognese nei manoscritti di Marcello Oretti</p>
-    <a href="catalog.html" class="btn btn-outline-light mt-4">Esplora il catalogo</a>
-  </div>
-</section>
-<!-- SEZIONE NAVIGAZIONE PRINCIPALE: 3 + 2 -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row gy-4 mt-2">
-
-   <section class="py-5">
-  <div class="container">
-
-    <!-- Riga da 3 centrata -->
-    <div class="row justify-content-center gy-4">
-      <div class="col-md-3">
-        <a href="catalog.html" class="text-decoration-none">
-          <div class="category-block" style="background-image: url('images/bg-opere.jpg');">
-            <div class="category-content">
-              <h5>Opere</h5>
-              <p>Tutte le opere descritte nei manoscritti.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a href="autori.html" class="text-decoration-none">
-          <div class="category-block" style="background-image: url('images/bg-autori.jpg');">
-            <div class="category-content">
-              <h5>Autori</h5>
-              <p>Artisti citati nei manoscritti.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-        <a href="collezionisti.html" class="text-decoration-none">
-          <div class="category-block" style="background-image: url('images/bg-collezionisti.jpg');">
-            <div class="category-content">
-              <h5>Collezionisti</h5>
-              <p>Indice dei collezionisti nominati nei manoscritti.</p>
-            </div>
-          </div>
-        </a>
-      </div>
+  <!-- HERO ESTESO CON IMMAGINE -->
+  <section class="hero-banner-ampio text-white text-center d-flex align-items-center justify-content-center">
+    <div class="overlay"></div>
+    <div class="content container position-relative">
+      <h1 class="display-4 fw-semibold">Collezioni d’arte a Bologna nel XVIII secolo</h1>
+      <p class="lead mt-3">Notizie sul collezionismo bolognese nei manoscritti di Marcello Oretti</p>
+      <a href="catalog.html" class="btn btn-outline-light mt-4">Esplora il catalogo</a>
     </div>
+  </section>
 
-    <!-- Spazio -->
-    <div class="my-4"></div>
+  <!-- SEZIONE CATEGORIE 3+2 -->
+  <section class="py-5">
+    <div class="container">
 
-    <!-- Riga da 2 centrata -->
-    <div class="row justify-content-center gy-4">
-      <div class="col-md-3">
-        <a href="map.html" class="text-decoration-none">
-          <div class="category-block" style="background-image: url('images/bg-mappa.jpg');">
-            <div class="category-content">
-              <h5>Mappa</h5>
-              <p>Luoghi delle collezioni nella Bologna del XVIII secolo.</p>
+      <!-- Riga 1: 3 blocchi centrati -->
+      <div class="row justify-content-center gy-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="catalog.html" class="text-decoration-none">
+            <div class="category-block" style="background-image: url('images/bg-opere.jpg');">
+              <div class="category-content">
+                <h5>Opere</h5>
+                <p class="small mb-0">Tutte le opere descritte nei manoscritti.</p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="autori.html" class="text-decoration-none">
+            <div class="category-block" style="background-image: url('images/bg-autori.jpg');">
+              <div class="category-content">
+                <h5>Autori</h5>
+                <p class="small mb-0">Artisti citati nei manoscritti.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="collezionisti.html" class="text-decoration-none">
+            <div class="category-block" style="background-image: url('images/bg-collezionisti.jpg');">
+              <div class="category-content">
+                <h5>Collezionisti</h5>
+                <p class="small mb-0">Indice dei collezionisti nominati.</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="col-md-3">
-        <a href="browse.html#manoscritti" class="text-decoration-none">
-          <div class="category-block" style="background-image: url('images/bg-manoscritti.jpeg');">
-            <div class="category-content">
-              <h5>Manoscritti</h5>
-              <p>I manoscritti di Marcello Oretti.</p>
+      <!-- Spazio -->
+      <div class="my-4"></div>
+
+      <!-- Riga 2: 2 blocchi centrati -->
+      <div class="row justify-content-center gy-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="map.html" class="text-decoration-none">
+            <div class="category-block" style="background-image: url('images/bg-mappa.jpg');">
+              <div class="category-content">
+                <h5>Mappa</h5>
+                <p class="small mb-0">Luoghi delle collezioni a Bologna.</p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="browse.html#manoscritti" class="text-decoration-none">
+            <div class="category-block" style="background-image: url('images/bg-manoscritti.jpeg');">
+              <div class="category-content">
+                <h5>Manoscritti</h5>
+                <p class="small mb-0">B104, B109 e B110 (Archiginnasio).</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- SEZIONE IL PROGETTO -->
+  <section class="py-5 border-top bg-white">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-md-10">
+          <h2 class="h4 mb-4">Il progetto</h2>
+          <p class="mb-4">Questo sito rende accessibili digitalmente i contenuti dei manoscritti di Marcello Oretti conservati presso la Biblioteca comunale dell’Archiginnasio di Bologna.</p>
 
-<!-- SEZIONE IL PROGETTO CON ACCORDION -->
-<section class="py-5 border-top bg-white">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-md-10">
-        <h2 class="h4 mb-4">Il progetto</h2>
-        <p class="mb-4">Questo sito rende accessibili digitalmente i contenuti dei manoscritti di Marcello Oretti conservati presso la Biblioteca comunale dell’Archiginnasio di Bologna.</p>
-
-        <div class="accordion" id="accordionProgetto">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                Scopri di più
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionProgetto">
-              <div class="accordion-body text-start">
-                <p>Marcello Oretti fu un erudito e accademico bolognese del XVIII secolo. I numerosi manoscritti ancora oggi conservati presso la Biblioteca dell'Archiginnasio sono una fonte unica per la documentazione sulle collezioni d’arte private della città. I suoi manoscritti – B104, B109 e B110 – costituiscono documenti fondamentali per ricostruire il panorama artistica bolognese del Settecento.</p>
-                <p>Il sito permette di navigare tra le opere, i collezionisti e i luoghi documentati, integrando mappe e immagini per una lettura contestuale del patrimonio culturale della Bologna dell’epoca.</p>
+          <div class="accordion" id="accordionProgetto">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                  Scopri di più
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionProgetto">
+                <div class="accordion-body text-start">
+                  <p>Marcello Oretti fu un erudito e accademico bolognese del XVIII secolo. I manoscritti – B104, B109 e B110 – sono una fonte unica per la documentazione delle collezioni d’arte private della città.</p>
+                  <p>Il sito permette di navigare tra opere, collezionisti e luoghi documentati, integrando mappe e immagini per una lettura contestuale del patrimonio culturale della Bologna dell’epoca.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER ELEGANTE -->
-<footer class="py-4 text-center bg-light border-top">
-  <div class="container">
-    <p class="mb-1 small">© 2025 - Collezioni d’Arte a Bologna nel XVIII secolo</p>
-    <p class="mb-0 small">Progetto per il corso in Digital Humanities · Università di Bologna</p>
-  </div>
-</footer>
-  <!-- TORNA IN ALTO -->
-<a href="#" class="btn btn-outline-secondary rounded-circle position-fixed bottom-0 end-0 m-4" style="z-index: 999;" title="Torna su">
-  ↑
-</a>
-    <!-- JS Bootstrap (necessario per accordion, navbar, modali ecc.) -->
+  <!-- FOOTER -->
+  <footer class="py-4 text-center bg-light border-top">
+    <div class="container">
+      <p class="mb-1 small">© 2025 - Collezioni d’Arte a Bologna nel XVIII secolo</p>
+      <p class="mb-0 small">Progetto per il corso in Digital Humanities · Università di Bologna</p>
+    </div>
+  </footer>
+
+  <!-- Torna su -->
+  <a href="#" class="btn btn-outline-secondary rounded-circle position-fixed bottom-0 end-0 m-4" style="z-index: 999;" title="Torna su">↑</a>
+
+  <!-- Bootstrap JS una sola volta -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
 </body>
 </html>
-
