@@ -74,7 +74,7 @@ section {
 }
 
 /* Sfondi specifici */
-.cat-catalogo { background-image: url('images/bg-opere.jpg'); }
+.cat-opere d arte { background-image: url('images/bg-opere.jpg'); }
 .cat-autori { background-image: url('images/bg-autori.jpg'); }
 .cat-collezionisti { background-image: url('images/bg-collezionisti.jpg'); }
 .cat-mappa { background-image: url('images/bg-mappa.jpg'); }
