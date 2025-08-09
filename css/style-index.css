@@ -14,7 +14,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-family: 'Times New Roman', serif;
-  color: #3e2d18;
+  color: #d6d2ce;
   font-weight: normal;
 }
 
@@ -22,7 +22,7 @@ a {
   color: #5c3d1e;
   text-decoration: none;
 }
-a:hover {
+a: hover {
   text-decoration: underline;
 }
 
