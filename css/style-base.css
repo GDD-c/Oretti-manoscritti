@@ -65,7 +65,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45); /* overlay scuro */
+  background: rgba(0,0,0,0.30); /* overlay scuro */
 }
 
 .category-box div {
@@ -74,11 +74,11 @@ section {
 }
 
 /* Sfondi specifici */
-.cat-opere d arte { background-image: url('images/bg-opere.jpg'); }
-.cat-autori { background-image: url('images/bg-autori.jpg'); }
-.cat-collezionisti { background-image: url('images/bg-collezionisti.jpg'); }
-.cat-mappa { background-image: url('images/bg-mappa.jpg'); }
-.cat-manoscritti { background-image: url('images/bg-manoscritti.jpg'); }
+.cat-opere  { background-image: url('/images/bg-opere.jpg'); }
+.cat-autori { background-image: url('/images/bg-autori.jpg'); }
+.cat-collezionisti { background-image: url('/images/bg-collezionisti.jpg'); }
+.cat-mappa { background-image: url('/images/bg-mappa.jpg'); }
+.cat-manoscritti { background-image: url('/images/bg-manoscritti.jpg'); }
 
 /* Utilities */
 .text-center {
