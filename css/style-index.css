@@ -62,27 +62,8 @@ a: hover {
 .cat-mappa         { background-image: url('../images/bg-mappa.jpg'); }
 .cat-manoscritti   { background-image: url('../images/bg-manoscritti.jpg'); }
 .category-block {
-  min-height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  color: #fff;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
-  transition: transform 0.3s ease;
-}
+  
 
-.category-block:hover {
-  transform: scale(1.03);
-}
-
-.category-content {
-  background: rgba(0, 0, 0, 0.35);
-  padding: 0.8rem;
-  border-radius: 6px;
-}
 
 /* piccolo hover (facoltativo) */
 .category-box:hover{ transform: translateY(-3px); transition: .25s ease; }
