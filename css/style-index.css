@@ -1,12 +1,3 @@
-/* ------------------------
-   CSS - Stile grafico per index.html
-   Fix:
-   - a:hover senza spazio
-   - rimosso selettore invalido ".cat-opere d arte"
-   - uniformato uso: category-box + cat-*
-   - percorso bg-manoscritti .jpeg (non .jpg)
-   - chiusa parentesi mancante, tolta .category-block vuota
------------------------- */
 
 /* Tipografia base */
 body {
