@@ -1,40 +1,42 @@
-
 <!DOCTYPE html>
-<html lang="it" data-theme="classico">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Esplora - Collezioni d'Arte a Bologna</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   <!-- Google Fonts -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- I tuoi CSS -->
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-palette.css">
-    <link rel="stylesheet" href="css/typography.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-palette.css">
+  <link rel="stylesheet" href="css/typography.css">
 </head>
 <body>
- <!-- Navbar -->
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand" href="index.html">I manoscritti di Marcello Oretti</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalogo</a></li>
           <li class="nav-item"><a class="nav-link" href="browse.html">Ricerca</a></li>
           <li class="nav-item"><a class="nav-link" href="map.html">Mappa</a></li>
         </ul>
       </div>
     </div>
   </nav>
-<!-- JS (va prima di </body>) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Intestazione -->
   <header class="py-4 text-center bg-white border-bottom">
@@ -44,28 +46,26 @@
     </div>
   </header>
 
-  <!-- Sezione: Manoscritti -->
+  <!-- Manoscritti -->
   <section id="manoscritti" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Manoscritti di Marcello Oretti</h2>
       <p class="text-center mb-5">
-        I manoscritti <strong>B104</strong>, <strong>B109</strong> e <strong>B110</strong> conservati presso la Biblioteca dell’Archiginnasio
-        documentano le collezioni d’arte private a Bologna nel XVIII secolo. Le notizie riportate da Oretti sono di notevole importanza 
-        poiché descrivono dettagliatamente tanto il collezionismo nobiliare quanto quello cittadino a Bologna nel corso del XVIII secolo.
+        I manoscritti <strong>B104</strong>, <strong>B109</strong> e <strong>B110</strong> conservati presso la Biblioteca dell’Archiginnasio documentano le collezioni d’arte private a Bologna nel XVIII secolo. Le notizie riportate da Oretti descrivono tanto il collezionismo nobiliare quanto quello cittadino.
       </p>
       <div class="row g-4 text-center">
         <div class="col-md-4">
-          <img src="images/b104.jpg" alt="B104" class="img-fluid rounded shadow-sm mb-2">
+          <img src="images/b104.jpg" alt="Frontespizio del manoscritto B104" class="img-fluid rounded shadow-sm mb-2" loading="lazy" width="800" height="600">
           <h5>B104</h5>
           <a href="item-b104.html" class="btn btn-outline-primary btn-sm mt-2">Visualizza</a>
         </div>
         <div class="col-md-4">
-          <img src="images/b109.jpg" alt="B109" class="img-fluid rounded shadow-sm mb-2">
+          <img src="images/b109.jpg" alt="Frontespizio del manoscritto B109" class="img-fluid rounded shadow-sm mb-2" loading="lazy" width="800" height="600">
           <h5>B109</h5>
           <a href="item-b109.html" class="btn btn-outline-primary btn-sm mt-2">Visualizza</a>
         </div>
         <div class="col-md-4">
-          <img src="images/b110.jpg" alt="B110" class="img-fluid rounded shadow-sm mb-2">
+          <img src="images/b110.jpg" alt="Frontespizio del manoscritto B110" class="img-fluid rounded shadow-sm mb-2" loading="lazy" width="800" height="600">
           <h5>B110</h5>
           <a href="item-b110.html" class="btn btn-outline-primary btn-sm mt-2">Visualizza</a>
         </div>
@@ -73,96 +73,58 @@
     </div>
   </section>
 
-  <!-- Sezione: Mappa -->
+  <!-- Mappa (iframe incapsulato correttamente) -->
   <section id="map" class="py-5">
-    <div class="container text-center">
-      <h2 class="mb-4">Mappa Interattiva</h2>
-      <p>Esplora i luoghi menzionati nei manoscritti di Oretti nella Bologna settecentesca.</p>
-      <div id="map-container" class="mt-4" style="height: 400px; background-color: #ddd;">
-        
-<!-- MAPPA INTERATTIVA INCORPORATA -->
-<section class="py-5 border-top">
-  <div class="container">
-    <h2 class="h5 mb-4 text-center">Luoghi delle collezioni</h2>
-    <div class="ratio ratio-16x9">
-      <iframe src="map.html" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" title="Mappa interattiva"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- Sezione: Opere -->
-<section id="opere" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Opere d'Arte</h2>
-    <p class="text-center mb-5">
-      Scopri le opere artistiche menzionate nei manoscritti. Un viaggio tra i grandi capolavori, le opere locali e le architetture presenti nelle case e palazzi bolognesi del XVIII secolo.
-    </p>
-    <div class="row g-4 text-center">
-      <div class="col-md-4">
-        <img src="images/icon-art.png" alt="Icona opera" class="img-fluid explore-icon mb-3">
-        <h5>Opere</h5>
-        <p class="small">Dipinti</p>
-      <p class="small">Sculture</p>
-          <p class="small">Decorazioni di case e palazzi</p>
-          <p class="small">Opere grafiche</p>
-        <a href="#opere-list" class="btn btn-outline-primary btn-sm">Visualizza</a>
-      </div>
-      <div class="col-md-4">
-        <img src="images/icon-map.png" alt="Icona luogo" class="img-fluid explore-icon mb-3">
-        <h5>Luoghi delle opere</h5>
-        <p class="small">Le collezioni in cui le opere erano conservate.</p>
-        <a href="#map" class="btn btn-outline-primary btn-sm">Vai alla mappa</a>
-      </div>
-      <div class="col-md-4">
-        <img src="images/b104.jpg" alt="Manoscritto" class="img-fluid rounded shadow-sm mb-2">
-        <h5>Documentazione</h5>
-        <p class="small">Come le opere sono descritte nei manoscritti.</p>
-        <a href="#manoscritti" class="btn btn-outline-primary btn-sm">Consulta</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Sezione: Autori -->
-<section id="autori" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Protagonisti del collezionismo d'arte</h2>
-    <p class="text-center mb-5">
-      Esplora i profili menzionati da Oretti nei suoi manoscritti: pittori, scultori e collezionisti che hanno fatto la storia dell’arte bolognese.
-    </p>
-    <div class="row g-4 text-center">
-      <div class="col-md-3">
-        <img src="images/icon-author.png" alt="Guercino" class="img-fluid explore-icon mb-3">
-        <h6>Guercino</h6>
-        <a href="item-guercino.html" class="btn btn-outline-secondary btn-sm">Scheda</a>
-      </div>
-      <div class="col-md-3">
-        <img src="images/icon-author.png" alt="Carracci" class="img-fluid explore-icon mb-3">
-        <h6>Annibale Carracci</h6>
-      <a href="item-carracci.html" class="btn btn-outline-secondary btn-sm">Scheda</a>
-      </div>
-      <div class="col-md-3">
-        <img src="images/icon-author.png" alt="Cignani" class="img-fluid explore-icon mb-3">
-        <h6>Carlo Cignani</h6>
-       <a href="item-cignani.html" class="btn btn-outline-secondary btn-sm">Scheda</a>
-      </div>
-      <div class="col-md-3">
-        <img src="images/icon-author.png" alt="Altri" class="img-fluid explore-icon mb-3">
-        <h6>Altri autori</h6>
-</div>
-<a href="item-altri.html" class="btn btn-outline-secondary btn-sm">Vedi tutti gli autori →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Footer -->
-  <footer class="py-4 text-center bg-light border-top">
     <div class="container">
-      <p class="mb-0 small">© 2025 - Collezioni d’Arte a Bologna nel XVIII secolo</p>
+      <h2 class="text-center mb-4">Mappa Interattiva</h2>
+      <p class="text-center">Esplora i luoghi menzionati nei manoscritti di Oretti nella Bologna settecentesca.</p>
+      <div class="ratio ratio-16x9 mt-4">
+        <iframe src="map.html" title="Mappa interattiva di Bologna" loading="lazy" allowfullscreen style="border:0;"></iframe>
+      </div>
     </div>
-  </footer>
+  </section>
 
-</body>
-</html>
+  <!-- Opere -->
+  <section id="opere" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Opere d'Arte</h2>
+      <p class="text-center mb-5">
+        Scopri le opere menzionate nei manoscritti: capolavori, opere locali e architetture presenti nelle case e nei palazzi bolognesi del XVIII secolo.
+      </p>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <img src="images/icon-art.png" alt="Icona per la sezione Opere" class="img-fluid explore-icon mb-3" loading="lazy" width="256" height="256">
+          <h5>Opere</h5>
+          <p class="small mb-1">Dipinti</p>
+          <p class="small mb-1">Sculture</p>
+          <p class="small mb-3">Decorazioni e opere grafiche</p>
+          <a href="#opere-list" class="btn btn-outline-primary btn-sm">Visualizza</a>
+        </div>
+        <div class="col-md-4">
+          <img src="images/icon-map.png" alt="Icona per la sezione Luoghi" class="img-fluid explore-icon mb-3" loading="lazy" width="256" height="256">
+          <h5>Luoghi delle opere</h5>
+          <p class="small">Le collezioni in cui le opere erano conservate.</p>
+          <a href="#map" class="btn btn-outline-primary btn-sm">Vai alla mappa</a>
+        </div>
+        <div class="col-md-4">
+          <img src="images/b104.jpg" alt="Esempio di pagina manoscritto" class="img-fluid rounded shadow-sm mb-3" loading="lazy" width="800" height="600">
+          <h5>Documentazione</h5>
+          <p class="small">Come le opere sono descritte nei manoscritti.</p>
+          <a href="#manoscritti" class="btn btn-outline-primary btn-sm">Consulta</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Autori -->
+  <section id="autori" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Protagonisti del collezionismo d'arte</h2>
+      <p class="text-center mb-5">
+        Esplora i profili menzionati da Oretti: pittori, scultori e collezionisti che hanno fatto la storia dell’arte bolognese.
+      </p>
+      <div class="row g-4 text-center">
+        <div class="col-md-3">
+          <img src="images/icon-author.png" alt="Ritratto stilizzato per la scheda del Guercino" class="img-fluid explore-icon mb-3" loading="lazy" width="256" height="256">
+          <h6>Guercino</h6>
+          <
