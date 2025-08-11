@@ -1,7 +1,4 @@
 
-/* ------------------------
-   CSS Base - Stile neutro ed elegante
------------------------- */
 
 /* Tipografia e colori principali */
 body {
@@ -152,44 +149,4 @@ footer {
   padding: 2rem 0;
   text-align: center;
 }
-/* ========================
-   TEMA CLASSICO: Blu petrolio + Avorio
-   Attiva aggiungendo data-theme="classico" al tag <html>
-======================== */
-:root[data-theme="classico"] body {
-  background-color: #F8F4EA; /* avorio caldo */
-  color: #1C1C1C;
-}
 
-:root[data-theme="classico"] h1,
-:root[data-theme="classico"] h2,
-:root[data-theme="classico"] h3,
-:root[data-theme="classico"] h4,
-:root[data-theme="classico"] h5 {
-  color: #0F4C5C; /* blu petrolio */
-}
-
-:root[data-theme="classico"] a {
-  color: #0F4C5C;
-}
-
-:root[data-theme="classico"] a:hover {
-  color: #08313B;
-}
-
-:root[data-theme="classico"] .bg-light {
-  background-color: #F8F4EA !important;
-}
-
-:root[data-theme="classico"] footer {
-  background-color: #0F4C5C; /* blu petrolio */
-  color: #ffffff;
-}
-
-:root[data-theme="classico"] footer a {
-  color: #ffffff;
-}
-
-:root[data-theme="classico"] footer a:hover {
-  color: #FFD166; /* giallo caldo per hover */
-}
