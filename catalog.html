@@ -1,147 +1,305 @@
 <!DOCTYPE html>
 <html lang="it" data-theme="classico">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catalogo - Collezioni d'Arte a Bologna</title>
- <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <title>Catalogo – Collezioni d’Arte a Bologna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- I tuoi CSS -->
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-palette.css">
-    <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-index.css">
+  <link rel="stylesheet" href="css/hero-banner-ampio.css">
+  <style>
+    /* Piccoli ritocchi */
+    .catalog-toolbar .form-select, .catalog-toolbar .form-control { min-width: 180px; }
+    .card-thumb { aspect-ratio: 4/3; object-fit: cover; width: 100%; border-bottom: 1px solid rgba(0,0,0,.06); }
+    .view-list .card { flex-direction: row; align-items: stretch; }
+    .view-list .card .thumb-wrap { width: 220px; flex: 0 0 220px; border-right: 1px solid rgba(0,0,0,.06); }
+    .view-list .card .card-body { padding: 1rem 1.25rem; }
+    .badge-type { text-transform: uppercase; letter-spacing:.04em; }
+    .pagination .page-link { cursor: pointer; }
+  </style>
 </head>
 <body>
 
-<!-- JS (va prima di </body>) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">I manoscritti di Marcello Oretti</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<header class="header-bar sticky-top">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="index.html">Oretti · Catalogo</a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalogo</a></li>
-          <li class="nav-item"><a class="nav-link" href="browse.html">Ricerca</a></li>
+          <li class="nav-item"><a class="nav-link" href="browse.html#manoscritti">Manoscritti</a></li>
           <li class="nav-item"><a class="nav-link" href="map.html">Mappa</a></li>
+          <li class="nav-item"><a class="nav-link" href="autori.html">Autori</a></li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
 
-  <!-- Titolo -->
-  <div class="container py-5">
-    <h1 class="mb-4">Catalogo delle Risorse</h1>
-
-  <div class="row g-4">
-
-  <!-- Manoscritto B104 -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/b104.jpg" class="card-img-top" alt="Manoscritto B104">
-      <div class="card-body">
-        <h5 class="card-title">Manoscritto B104</h5>
-        <p class="card-text">Le collezioni dei palazzi nobiliari bolognesi.</p>
-        <a href="item-b104.html" class="btn btn-outline-primary">Visualizza indici</a>
+<main class="container py-4">
+  <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3 catalog-toolbar">
+    <div>
+      <h1 class="h4 mb-1">Catalogo</h1>
+      <p class="text-muted small mb-0">Esplora, filtra e ordina le opere, testi, immagini, audio e video.</p>
+    </div>
+    <!-- Vista + ordinamento -->
+    <div class="d-flex gap-2">
+      <div class="btn-group" role="group" aria-label="Cambia vista">
+        <button class="btn btn-outline-secondary active" id="btnGrid" title="Vista griglia" aria-pressed="true">Griglia</button>
+        <button class="btn btn-outline-secondary" id="btnList" title="Vista lista" aria-pressed="false">Lista</button>
       </div>
+      <select id="sort" class="form-select">
+        <option value="title-asc">Titolo A→Z</option>
+        <option value="title-desc">Titolo Z→A</option>
+        <option value="date-asc">Data ↑</option>
+        <option value="date-desc">Data ↓</option>
+      </select>
     </div>
   </div>
 
-  <!-- Manoscritto B109 -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/b109.jpg" class="card-img-top" alt="Manoscritto B109">
-      <div class="card-body">
-        <h5 class="card-title">Manoscritto B109</h5>
-        <p class="card-text">Le collezioni delle case cittadine bolognesi.</p>
-        <a href="item-b109.html" class="btn btn-outline-primary">Visualizza indici</a>
-      </div>
+  <!-- Ricerca + filtri -->
+  <div class="row g-3 align-items-end mb-3 catalog-toolbar">
+    <div class="col-12 col-md-4">
+      <label for="q" class="form-label">Cerca</label>
+      <input id="q" type="search" class="form-control" placeholder="Titolo, autore, soggetto…" aria-describedby="resultCount">
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="f-type" class="form-label">Tipologia</label>
+      <select id="f-type" class="form-select">
+        <option value="">Tutte</option>
+        <option value="immagine">Immagine</option>
+        <option value="testo">Testo</option>
+        <option value="audio">Audio</option>
+        <option value="video">Video</option>
+      </select>
+    </div>
+    <div class="col-6 col-md-3">
+      <label for="f-place" class="form-label">Luogo</label>
+      <select id="f-place" class="form-select">
+        <option value="">Tutti</option>
+        <option value="Bologna">Bologna</option>
+        <option value="Imola">Imola</option>
+        <option value="Modena">Modena</option>
+      </select>
+    </div>
+    <div class="col-12 col-md-2">
+      <label for="f-year" class="form-label">Fino all’anno</label>
+      <input id="f-year" type="range" min="1700" max="1800" step="1" value="1800" class="form-range">
+      <div class="small text-muted">≤ <span id="yearVal">1800</span></div>
     </div>
   </div>
 
-  <!-- Manoscritto B110 -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/b110.jpg" class="card-img-top" alt="Manoscritto B110">
-      <div class="card-body">
-        <h5 class="card-title">Manoscritto B110</h5>
-        <p class="card-text">Le collezioni delle ville del contado bolognese.</p>
-        <a href="item-b110.html" class="btn btn-outline-primary">Visualizza indici</a>
-      </div>
-    </div>
-  </div>
+  <!-- Contatore risultati -->
+  <p id="resultCount" class="small text-muted" aria-live="polite">—</p>
 
-  <!-- Autori -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/bg-autori.jpg" class="card-img-top" alt="Opera del Guercino">
-      <div class="card-body">
-        <h5 class="card-title">Autori</h5>
-        <p class="card-text">Indice degli autori citati nei manoscritti</p>
-        <a href="item-guercino.html" class="btn btn-outline-primary">Visualizza</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Collezionisti -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/bg-collezionisti.jpg" class="card-img-top" alt="Collezionisti">
-      <div class="card-body">
-        <h5 class="card-title">Collezionisti</h5>
-        <p class="card-text">Citati da Oretti nei manoscritti, custodita presso i Servi.</p>
-        <a href="item-albani.html" class="btn btn-outline-primary">Visualizza</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-  <!-- Opere d'arte -->
-  <div class="col-md-4">
-    <div class="card h-100">
-      <img src="images/bg-opere.jpg" class="card-img-top" alt="Opere d'arte">
-      <div class="card-body">
-        <h5 class="card-title">Opere d'arte</h5>
-        <p class="card-text">Schede delle opere citate da Oretti nei manoscritti</p>
-        <a href="item-albani.html" class="btn btn-outline-primary">Visualizza</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-      <!-- Mappa storica -->
-      <div class="col-md-4">
-        <div class="card h-100">
-          <img src="images/bg-mappa.jpg" class="card-img-top" alt="Mappa Bologna XVIII secolo">
-          <div class="card-body">
-            <h5 class="card-title">Mappa di Bologna</h5>
-            <p class="card-text">Mappa interattiva della città per esplorare le collezioni d’arte.</p>
-            <a href="browse.html#map" class="btn btn-outline-primary">Visualizza</a>
-          </div>
+  <!-- Lista risultati -->
+  <div id="results" class="row g-3" data-view="grid">
+    <!-- OGNI ITEM: card con data- attributi per filtrare/ordinare -->
+    <!-- Esempi di 9 item; duplica seguendo lo schema -->
+    <div class="col-12 col-sm-6 col-lg-4 item" 
+         data-title="Madonna col Bambino" data-date="1730" data-type="immagine" data-place="Bologna">
+      <article class="card h-100">
+        <div class="thumb-wrap">
+          <img class="card-thumb" src="media/opera-001.jpg" alt="Madonna col Bambino" loading="lazy" width="800" height="600">
         </div>
-      </div>
-
+        <div class="card-body">
+          <h2 class="h6 card-title mb-1"><a href="item.html?id=OP-001">Madonna col Bambino</a></h2>
+          <p class="small text-muted mb-2">ca. 1730 · Olio su tela · Bologna</p>
+          <span class="badge text-bg-secondary badge-type">Immagine</span>
+        </div>
+      </article>
     </div>
 
-
-  <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3 mt-5">
-    <div class="container">
-      <p class="mb-0">© 2025 - Collezioni Oretti | Biblioteca dell’Archiginnasio</p>
+    <div class="col-12 col-sm-6 col-lg-4 item" 
+         data-title="Inventario Collezione Rossi" data-date="1752" data-type="testo" data-place="Bologna">
+      <article class="card h-100">
+        <div class="thumb-wrap">
+          <img class="card-thumb" src="media/testo-rossi.jpg" alt="Inventario Collezione Rossi (frontespizio)" loading="lazy" width="800" height="600">
+        </div>
+        <div class="card-body">
+          <h2 class="h6 card-title mb-1"><a href="item.html?id=TXT-001">Inventario Collezione Rossi</a></h2>
+          <p class="small text-muted mb-2">1752 · Manoscritto · Bologna</p>
+          <span class="badge text-bg-secondary badge-type">Testo</span>
+        </div>
+      </article>
     </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-12 col-sm-6 col-lg-4 item" 
+         data-title="Ritratto di collezionista" data-date="1765" data-type="immagine" data-place="Imola">
+      <article class="card h-100">
+        <div class="thumb-wrap">
+          <img class="card-thumb" src="media/opera-ritratto.jpg" alt="Ritratto di collezionista" loading="lazy" width="800" height="600">
+        </div>
+        <div class="card-body">
+          <h2 class="h6 card-title mb-1"><a href="item.html?id=OP-057">Ritratto di collezionista</a></h2>
+          <p class="small text-muted mb-2">1765 · Olio su tela · Imola</p>
+          <span class="badge text-bg-secondary badge-type">Immagine</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- altri 6 placeholder -->
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Lettera di Oretti" data-date="1741" data-type="testo" data-place="Modena">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/lettera.jpg" alt="Lettera di Oretti" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=TXT-010">Lettera di Oretti</a></h2><p class="small text-muted mb-2">1741 · Epistolario · Modena</p><span class="badge text-bg-secondary badge-type">Testo</span></div></article>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Inventario Casa Zambeccari" data-date="1728" data-type="testo" data-place="Bologna">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/inventario-zambeccari.jpg" alt="Inventario Casa Zambeccari" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=TXT-011">Inventario Casa Zambeccari</a></h2><p class="small text-muted mb-2">1728 · Manoscritto · Bologna</p><span class="badge text-bg-secondary badge-type">Testo</span></div></article>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Descrizione di galleria privata" data-date="1779" data-type="testo" data-place="Bologna">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/descrizione-galleria.jpg" alt="Descrizione di galleria privata" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=TXT-040">Descrizione di galleria privata</a></h2><p class="small text-muted mb-2">1779 · Descrizione · Bologna</p><span class="badge text-bg-secondary badge-type">Testo</span></div></article>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Appunto su opere per tema sacro" data-date="1715" data-type="testo" data-place="Imola">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/appunto-sacro.jpg" alt="Appunto su opere per tema sacro" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=TXT-050">Appunto su opere per tema sacro</a></h2><p class="small text-muted mb-2">1715 · Appunto · Imola</p><span class="badge text-bg-secondary badge-type">Testo</span></div></article>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Audio: lettura di inventario" data-date="1750" data-type="audio" data-place="Bologna">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/audio-placeholder.jpg" alt="Audio: lettura di inventario" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=AUD-001">Audio · lettura inventario</a></h2><p class="small text-muted mb-2">1750 · Voce narrante · Bologna</p><span class="badge text-bg-secondary badge-type">Audio</span></div></article>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 item" data-title="Video: Bologna nel Settecento" data-date="2024" data-type="video" data-place="Bologna">
+      <article class="card h-100"><div class="thumb-wrap"><img class="card-thumb" src="media/video-placeholder.jpg" alt="Video: Bologna nel Settecento" loading="lazy" width="800" height="600"></div><div class="card-body"><h2 class="h6 card-title mb-1"><a href="item.html?id=VID-001">Video · Bologna nel Settecento</a></h2><p class="small text-muted mb-2">2024 · Documentario · Bologna</p><span class="badge text-bg-secondary badge-type">Video</span></div></article>
+    </div>
+  </div>
+
+  <!-- Paginazione -->
+  <nav class="mt-4" aria-label="Paginazione catalogo">
+    <ul class="pagination justify-content-center" id="pager"></ul>
+  </nav>
+</main>
+
+<footer class="py-4 text-center bg-light border-top">
+  <div class="container">
+    <p class="mb-1 small">© 2025 - Collezioni d’Arte a Bologna nel XVIII secolo</p>
+    <p class="mb-0 small">Progetto per il corso in Digital Humanities · Università di Bologna</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<!-- Catalog logic (filtro/ordina/vista/paginazione) -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const q = document.getElementById('q');
+  const fType = document.getElementById('f-type');
+  const fPlace = document.getElementById('f-place');
+  const fYear = document.getElementById('f-year');
+  const yearVal = document.getElementById('yearVal');
+  const sortSel = document.getElementById('sort');
+  const resultCount = document.getElementById('resultCount');
+  const results = document.getElementById('results');
+  const items = Array.from(results.querySelectorAll('.item'));
+  const pager = document.getElementById('pager');
+  const btnGrid = document.getElementById('btnGrid');
+  const btnList = document.getElementById('btnList');
+
+  // Stato
+  const state = { q:'', type:'', place:'', year:parseInt(fYear.value,10), sort:'title-asc', view:'grid', page:1, perPage:9 };
+
+  function normalize(s){ return s.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,''); }
+
+  function applyFilters(){
+    const nq = normalize(state.q);
+    const filtered = items.filter(el=>{
+      const title = normalize(el.dataset.title||'');
+      const date = parseInt(el.dataset.date||'0',10);
+      const type = el.dataset.type||'';
+      const place = el.dataset.place||'';
+      const byQ = !nq || title.includes(nq);
+      const byT = !state.type || type===state.type;
+      const byP = !state.place || place===state.place;
+      const byY = !state.year || (date<=state.year);
+      return byQ && byT && byP && byY;
+    });
+
+    // Sort
+    filtered.sort((a,b)=>{
+      const ta = (a.dataset.title||'').toLowerCase();
+      const tb = (b.dataset.title||'').toLowerCase();
+      const da = parseInt(a.dataset.date||'0',10);
+      const db = parseInt(b.dataset.date||'0',10);
+      switch(state.sort){
+        case 'title-asc':  return ta.localeCompare(tb);
+        case 'title-desc': return tb.localeCompare(ta);
+        case 'date-asc':   return da - db;
+        case 'date-desc':  return db - da;
+      }
+      return 0;
+    });
+
+    // Paginazione
+    const total = filtered.length;
+    const pages = Math.max(1, Math.ceil(total / state.perPage));
+    if(state.page>pages) state.page = pages;
+    const start = (state.page-1)*state.perPage;
+    const end = start + state.perPage;
+
+    items.forEach(el=> el.classList.add('d-none'));
+    filtered.slice(start,end).forEach(el=> el.classList.remove('d-none'));
+
+    // Layout
+    results.classList.toggle('view-list', state.view==='list');
+    results.dataset.view = state.view;
+
+    // Update count
+    resultCount.textContent = total
+      ? `${total} risultati · pagina ${state.page}/${pages}`
+      : 'Nessun risultato';
+
+    // Build pager
+    buildPager(pages);
+  }
+
+  function buildPager(pages){
+    pager.innerHTML = '';
+    const make = (label, page, disabled=false, active=false) => {
+      const li = document.createElement('li');
+      li.className = 'page-item' + (disabled?' disabled':'') + (active?' active':'');
+      const a = document.createElement('a');
+      a.className = 'page-link';
+      a.textContent = label;
+      a.href = '#';
+      a.addEventListener('click', (e)=>{ e.preventDefault(); if(!disabled && !active){ state.page = page; applyFilters(); }});
+      li.appendChild(a);
+      return li;
+    };
+    const prev = Math.max(1, state.page-1);
+    pager.appendChild(make('«', prev, state.page===1));
+    for(let p=1; p<=pages; p++){
+      if(p===1 || p===pages || Math.abs(p-state.page)<=1){
+        pager.appendChild(make(String(p), p, false, p===state.page));
+      }else if(Math.abs(p-state.page)===2){
+        const li = document.createElement('li'); li.className='page-item disabled';
+        li.innerHTML = '<span class="page-link">…</span>'; pager.appendChild(li);
+      }
+    }
+    const next = Math.min(pages, state.page+1);
+    pager.appendChild(make('»', next, state.page===pages));
+  }
+
+  // Eventi
+  q.addEventListener('input', ()=>{ state.q=q.value.trim(); state.page=1; applyFilters(); });
+  fType.addEventListener('change', ()=>{ state.type=fType.value; state.page=1; applyFilters(); });
+  fPlace.addEventListener('change', ()=>{ state.place=fPlace.value; state.page=1; applyFilters(); });
+  fYear.addEventListener('input', ()=>{ state.year=parseInt(fYear.value,10); yearVal.textContent=state.year; state.page=1; applyFilters(); });
+  sortSel.addEventListener('change', ()=>{ state.sort=sortSel.value; applyFilters(); });
+
+  btnGrid.addEventListener('click', ()=>{
+    state.view='grid'; btnGrid.classList.add('active'); btnGrid.setAttribute('aria-pressed','true');
+    btnList.classList.remove('active'); btnList.setAttribute('aria-pressed','false'); applyFilters();
+  });
+  btnList.addEventListener('click', ()=>{
+    state.view='list'; btnList.classList.add('active'); btnList.setAttribute('aria-pressed','true');
+    btnGrid.classList.remove('active'); btnGrid.setAttribute('aria-pressed','false'); applyFilters();
+  });
+
+  // Init
+  yearVal.textContent = state.year;
+  applyFilters();
+});
+</script>
 </body>
 </html>
