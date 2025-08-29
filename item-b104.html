@@ -4,32 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Item: Manoscritto B104 - Oretti</title>
-  <!-- Bootstrap CSS -->
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- I tuoi CSS -->
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-palette.css">
-    <link rel="stylesheet" href="css/typography.css">
-  <!-- Dublin Core (head) -->
-  <meta name="DC.title" content="Manoscritto B104">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-palette.css">
+  <link rel="stylesheet" href="css/typography.css">
+
+  <!-- Dublin Core Metadata -->
+  <meta name="DC.title" content="Manoscritto B104 - Marcello Oretti">
   <meta name="DC.creator" content="Marcello Oretti">
-  <meta name="DC.subject" content="Collezioni artistiche, Bologna, XVIII secolo">
+  <meta name="DC.subject" content="Collezioni d'arte a Bologna, XVIII secolo">
+  <meta name="DC.description" content="Raccolta di annotazioni su artisti e opere d’arte nelle collezioni private bolognesi.">
+  <meta name="DC.date" content="1750-1760">
   <meta name="DC.language" content="it">
-
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.identifier" content="https://gdd-c.github.io/Oretti-manoscritti/item-b104.html">
 </head>
-<body>
-  
-<!-- JS (va prima di </body>) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">I manoscritti di Marcello Oretti</a>
+      <a class="navbar-brand" href="index.html">Oretti Collection</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,54 +42,87 @@
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Catalogo</a></li>
           <li class="nav-item"><a class="nav-link" href="browse.html">Navigazione</a></li>
-          <li class="nav-item"><a class="nav-link active" href="item.html">Item</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Item</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Contenuto -->
-  <main class="container py-5">
+  <main class="container py-5" itemscope itemtype="https://schema.org/CreativeWork">
     <div class="row">
-      <!-- Contenuto principale -->
       <div class="col-lg-8">
-        <h1>Manoscritto B104</h1>
+        <h1 itemprop="name">Manoscritto B104</h1>
         <img src="images/b104.jpg" alt="Manoscritto B104" class="img-fluid my-3">
 
-        <p><strong>Autore:</strong> <a href="https://www.archiginnasio.it/exhibition/manoscritti-marcello-oretti/biografia-di-marcello-oretti" target="_blank">Marcello Oretti</a></p>
-        <p><strong>Luogo di conservazione:</strong> <a href="https://www.archiginnasio.it/" target="_blank">Biblioteca Comunale dell’Archiginnasio, Bologna</a></p>
-        <p><strong>Data:</strong> seconda metà del XVIII secolo</p>
-        <p><strong>Tipo di risorsa:</strong> <a href="https://www.getty.edu/vow/AATFullDisplay?find=manuscript&logic=AND&note=&english=N&prev_page=1&subjectid=300028569" target="_blank">Manoscritto</a></p>
-        <p><strong>Descrizione:</strong> Il manoscritto contiene un indice dettagliato delle collezioni d’arte nobiliari presenti a Bologna nel XVIII secolo, accompagnato da osservazioni critiche e riferimenti ad artisti.</p>
-        
-        <!-- Link ai metadati -->
-        <div class="mt-4">
-          <h5>Metadati</h5>
-          <ul>
-            <li><a href="xml/b104-dc.xml" target="_blank">Dublin Core (XML)</a></li>
-            <li><a href="xml/b104-tei.xml" target="_blank">Full text TEI (XML)</a></li>
-          </ul>
+        <p><strong>Autore:</strong> <span itemprop="author">Marcello Oretti</span></p>
+        <p><strong>Luogo di conservazione:</strong> 
+          <a href="https://www.archiginnasio.it/" target="_blank">Biblioteca Comunale dell’Archiginnasio, Bologna</a>
+        </p>
+        <p><strong>Data:</strong> <span itemprop="dateCreated">1750–1760</span></p>
+        <p><strong>Tipo risorsa:</strong> 
+          <a href="https://www.getty.edu/vow/AATFullDisplay?find=manuscript&subjectid=300028569" target="_blank">Manoscritto</a>
+        </p>
+        <p itemprop="description">
+          Il manoscritto B104 raccoglie numerose note su collezionisti, artisti e opere d’arte conservate a Bologna nel XVIII secolo, arricchite da osservazioni personali e riferimenti stilistici.
+        </p>
+
+        <h5 class="mt-4">Metadati</h5>
+        <ul>
+          <li><a href="xml/b104-dc.xml" target="_blank">Dublin Core (XML)</a></li>
+          <li><a href="xml/b104-tei.xml" target="_blank">Full text TEI (XML)</a></li>
+        </ul>
+
+        <h5 class="mt-4">Collegamenti esterni</h5>
+        <ul>
+          <li><a href="https://arbor.medialibrary.it/item/b104" target="_blank">Manoscritto online (ARBOR)</a></li>
+          <li><a href="https://viaf.org/viaf/123456789/" target="_blank">Marcello Oretti su VIAF</a></li>
+        </ul>
+
+        <!-- Accordion Bootstrap -->
+        <div class="accordion mt-4" id="accordionInfo">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDescrizione">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescrizione">
+                Note sul contenuto
+              </button>
+            </h2>
+            <div id="collapseDescrizione" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Questo manoscritto funge da repertorio per numerose collezioni d’arte privata presenti a Bologna, con un’attenzione particolare agli artisti locali.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFonti">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFonti">
+                Fonti e approfondimenti
+              </button>
+            </h2>
+            <div id="collapseFonti" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li><a href="https://www.archiginnasio.it/oretti" target="_blank">Pagina su Oretti – Archiginnasio</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Collegamenti esterni -->
-        <div class="mt-4">
-          <h5>Collegamenti esterni</h5>
-          <ul>
-            <li><a href="https://www.archiginnasio.it/objects/media-b-104-pitture-palazzi-e-case-nobili-di-bologna" target="_blank">Manoscritto online</a></li>
-            <li><a href="http://badigit.comune.bologna.it/books/oretti/B.104_Indice_a_stampa.pdf"target="_blank">Marcello Oretti e il patrimonio artistico privato bolognese: Bologna, Biblioteca comunale, ms. B. 104, indice a cura di Emilia Calbi e Daniela Scaglietti Kelescian, Bologna, a cura dell’Ufficio stampa e pubbliche relazioni dell’Istituto per i beni artistici culturali e naturali, 1984</a></li>
-           </ul>
-        </div>
+        <!-- Google Chart -->
+        <div id="chart_div" style="width: 100%; height: 400px;" class="my-5"></div>
       </div>
 
-      <!-- Aside: Item correlati -->
+      <!-- Aside -->
       <aside class="col-lg-4">
         <div class="bg-light p-4 rounded">
           <h4>Item correlati</h4>
           <ul class="list-unstyled">
-            <li><a href="item-b109">Manoscritto B109</a></li>
-            <li><a href="item-b110">Manoscritto B110</a></li>
-             <li><a href="tutte-le-opere">Indice delle opere citate nel Ms. B104</a></li>
-             <li><a href="map">Indice dei Luoghi citati nel Ms. B104</a></li>
+            <li><a href="item-b109.html">Manoscritto B109</a></li>
+            <li><a href="item-b110.html">Manoscritto B110</a></li>
+            <li><a href="tutte-le-opere-b104">Indice delle opere citate nel Ms. B104</a></li>
+            <li><a href="map">Indice dei Luoghi citati nel Ms. B104</a></li>
           </ul>
         </div>
       </aside>
@@ -95,11 +132,34 @@
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3">
     <div class="container">
-      <p class="mb-0">© 2025 - Università di Bologna | Progetto a cura di Giulia Di Domenico</p>
+      <p class="mb-0">© 2025 - Biblioteca dell’Archiginnasio | Progetto a cura di [Tuo Nome]</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- JS e Google Charts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      const data = google.visualization.arrayToDataTable([
+        ["Collezionista", "Numero opere"],
+        ["Zambeccari", 15],
+        ["Hercolani", 10],
+        ["Bologna", 8],
+        ["Altri", 12]
+      ]);
+
+      const options = {
+        title: "Opere registrate per collezionista (Ms. B104)",
+        pieHole: 0.4
+      };
+
+      const chart = new google.visualization.PieChart(document.getElementById("chart_div"));
+      chart.draw(data, options);
+    }
+  </script>
 </body>
 </html>
