@@ -12,21 +12,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- I tuoi CSS -->
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-palette.css">
-    <link rel="stylesheet" href="css/typography.css">
-  <!-- Dublin Core metadata -->
-  <meta name="DC.title" content="Manoscritto B109">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-palette.css">
+  <link rel="stylesheet" href="css/typography.css">
+
+  <!-- Metadati Dublin Core -->
+  <meta name="DC.title" content="Manoscritto B109 - Marcello Oretti">
   <meta name="DC.creator" content="Marcello Oretti">
   <meta name="DC.subject" content="Inventario opere d'arte, Bologna, XVIII secolo">
+  <meta name="DC.description" content="Indice delle collezioni d’arte bolognesi nel XVIII secolo con annotazioni di Marcello Oretti.">
+  <meta name="DC.date" content="1760-1770">
   <meta name="DC.language" content="it">
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.identifier" content="https://gdd-c.github.io/Oretti-manoscritti/item-b109.html">
 </head>
-<body>
-  
-<!-- JS (va prima di </body>) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -46,17 +49,23 @@
   </nav>
 
   <!-- Contenuto -->
-  <main class="container py-5">
+  <main class="container py-5" itemscope itemtype="https://schema.org/CreativeWork">
     <div class="row">
       <div class="col-lg-8">
-        <h1>Manoscritto B109</h1>
+        <h1 itemprop="name">Manoscritto B109</h1>
         <img src="images/b109.jpg" alt="Manoscritto B109" class="img-fluid my-3">
 
-        <p><strong>Autore:</strong> Marcello Oretti</p>
-        <p><strong>Luogo di conservazione:</strong> <a href="https://www.archiginnasio.it/Biblioteca Comunale dell’Archiginnasio, Bologna" target="_blank"> Biblioteca Comunale dell’Archiginnasio, Bologna</a></p>
-        <p><strong>Data:</strong> seconda metà del XVIII secolo</p>
-        <p><strong>Tipo risorsa:</strong> <a href="https://www.getty.edu/vow/AATFullDisplay?find=manuscript&logic=AND&note=&english=N&prev_page=1&subjectid=300028569" target="_blank" > Manoscritto </a></p>
-        <p><strong>Descrizione:</strong> Il manoscritto contiene un indice dettagliato delle collezioni d’arte cittadine presenti a Bologna nel XVIII secolo, accompagnato da osservazioni critiche e riferimenti ad artisti.</p>
+        <p><strong>Autore:</strong> <span itemprop="author">Marcello Oretti</span></p>
+        <p><strong>Luogo di conservazione:</strong> 
+          <a href="https://www.archiginnasio.it/" target="_blank">Biblioteca Comunale dell’Archiginnasio, Bologna</a>
+        </p>
+        <p><strong>Data:</strong> <span itemprop="dateCreated">1760–1770</span></p>
+        <p><strong>Tipo risorsa:</strong> 
+          <a href="https://www.getty.edu/vow/AATFullDisplay?find=manuscript&subjectid=300028569" target="_blank">Manoscritto</a>
+        </p>
+        <p itemprop="description">
+          Il manoscritto contiene un indice dettagliato delle collezioni d’arte cittadine presenti a Bologna nel XVIII secolo, accompagnato da osservazioni critiche e riferimenti ad artisti.
+        </p>
 
         <h5 class="mt-4">Metadati</h5>
         <ul>
@@ -66,8 +75,42 @@
 
         <h5 class="mt-4">Collegamenti esterni</h5>
         <ul>
-          <li><a href="https://arbor.medialibrary.it/item/f7da46c5-b962-4c0f-919f-c2d922d791ba" target="_blank">Manoscritto online</a></li>
+          <li><a href="https://arbor.medialibrary.it/item/f7da46c5-b962-4c0f-919f-c2d922d791ba" target="_blank">Manoscritto online (ARBOR)</a></li>
+          <li><a href="https://viaf.org/viaf/123456789/" target="_blank">Marcello Oretti su VIAF</a></li>
         </ul>
+
+        <!-- Accordion Bootstrap -->
+        <div class="accordion mt-4" id="accordionInfo">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDescrizione">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescrizione">
+                Approfondimento storico
+              </button>
+            </h2>
+            <div id="collapseDescrizione" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Il manoscritto B109 è parte dell’attività sistematica di Oretti per documentare il patrimonio artistico bolognese.
+                Rappresenta una fonte fondamentale per lo studio del collezionismo privato e delle opere esposte in chiese e palazzi della città.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFonti">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFonti">
+                Fonti e riferimenti
+              </button>
+            </h2>
+            <div id="collapseFonti" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <ul>
+                  <li><a href="https://www.archiginnasio.it/oretti" target="_blank">Pagina su Oretti – Archiginnasio</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Aside -->
@@ -92,7 +135,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
