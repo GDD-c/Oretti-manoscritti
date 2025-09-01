@@ -1,0 +1,23 @@
+[
+  {
+    "id": "pepoli",
+    "titolo": "Famiglia Pepoli",
+    "tipo": "collezionisti",
+    "descrizione": "Collezione Pepoli documentata nei manoscritti B104 e B110.",
+    "link": "catalog.html#pepoli"
+  },
+  {
+    "id": "b104",
+    "titolo": "Manoscritto B104",
+    "tipo": "manoscritto",
+    "descrizione": "Manoscritto che documenta collezioni bolognesi.",
+    "link": "browse.html#b104"
+  },
+  {
+    "id": "madonna-collezione",
+    "titolo": "Madonna con Bambino",
+    "tipo": "opere",
+    "descrizione": "Opera d’arte descritta nel manoscritto B110.",
+    "link": "browse.html#madonna"
+  }
+]
