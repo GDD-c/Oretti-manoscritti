@@ -1,23 +1,65 @@
 [
   {
-    "id": "pepoli",
-    "titolo": "Famiglia Pepoli",
-    "tipo": "collezionisti",
-    "descrizione": "Collezione Pepoli documentata nei manoscritti B104 e B110.",
-    "link": "catalog.html#pepoli"
-  },
-  {
     "id": "b104",
     "titolo": "Manoscritto B104",
     "tipo": "manoscritto",
-    "descrizione": "Manoscritto che documenta collezioni bolognesi.",
+    "descrizione": "Descrive opere conservate nelle collezioni private bolognesi, con note autografe di Oretti.",
     "link": "browse.html#b104"
   },
   {
-    "id": "madonna-collezione",
+    "id": "b109",
+    "titolo": "Manoscritto B109",
+    "tipo": "manoscritto",
+    "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle chiese di Bologna.",
+    "link": "browse.html#b109"
+  },
+  {
+    "id": "b110",
+    "titolo": "Manoscritto B110",
+    "tipo": "manoscritto",
+    "descrizione": "Inventario di opere nelle accademie e nei palazzi nobiliari bolognesi.",
+    "link": "browse.html#b110"
+  },
+  {
+    "id": "pepoli",
+    "titolo": "Famiglia Pepoli",
+    "tipo": "collezionisti",
+    "descrizione": "Storica famiglia aristocratica bolognese, proprietaria di una vasta collezione d’arte nel XVIII secolo.",
+    "link": "catalog.html#pepoli"
+  },
+  {
+    "id": "zambeccari",
+    "titolo": "Famiglia Zambeccari",
+    "tipo": "collezionisti",
+    "descrizione": "Collezionisti attivi a Bologna, citati in diversi passaggi del manoscritto B104.",
+    "link": "catalog.html#zambeccari"
+  },
+  {
+    "id": "guercino",
+    "titolo": "Guercino",
+    "tipo": "autori",
+    "descrizione": "Giovanni Francesco Barbieri, detto il Guercino, autore di opere presenti in diverse collezioni bolognesi.",
+    "link": "autori.html#guercino"
+  },
+  {
+    "id": "madonna-con-bambino",
     "titolo": "Madonna con Bambino",
     "tipo": "opere",
-    "descrizione": "Opera d’arte descritta nel manoscritto B110.",
+    "descrizione": "Opera attribuita a Guido Reni, conservata nella collezione Pepoli.",
     "link": "browse.html#madonna"
+  },
+  {
+    "id": "palazzo-pepoli",
+    "titolo": "Palazzo Pepoli",
+    "tipo": "luogo",
+    "descrizione": "Residenza della famiglia Pepoli, sede di una ricca collezione artistica.",
+    "link": "map.html#pepoli"
+  },
+  {
+    "id": "archiginnasio",
+    "titolo": "Biblioteca dell’Archiginnasio",
+    "tipo": "luogo",
+    "descrizione": "Conserva i manoscritti originali di Marcello Oretti.",
+    "link": "map.html#archiginnasio"
   }
 ]
