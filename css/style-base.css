@@ -1,6 +1,6 @@
-
-
-/* Tipografia e colori principali */
+/* ============================================================
+   TIPOLOGIA & COLORI PRINCIPALI
+============================================================ */
 body {
   font-family: 'Georgia', serif;
   font-size: 1.05rem;
@@ -9,65 +9,6 @@ body {
   color: #222;
   margin: 0;
   padding: 0;
-}
-.hero-banner {
-  background-color: #f2f0eb;
-  padding: 6rem 1rem;
-}
-
-.hero-banner h1 {
-  font-size: 2.5rem;
-  color: #3e2d18;
-}
-
-.hero-banner p {
-  font-size: 1.25rem;
-  color: #5c3d1e;
-}
-/* Categorie con immagine di sfondo */
-.category-block {
-  min-height: 220px;
-}
-.category-block {
-  color: #fff;
-  text-align: center;
-  padding: 4rem 2rem;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category-block h5 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.category-block p {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.category-block:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-
-/* Overlay scuro per leggibilità */
-.category-block::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.category-content {
-  position: relative;
-  z-index: 2;
 }
 
 h1, h2, h3, h4, h5 {
@@ -89,45 +30,103 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sezioni */
-section {
-  padding: 4rem 0;
-}
-.category-box {
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  color: #fff;
-  position: relative;
-  overflow: hidden;
+/* ============================================================
+   HERO BANNER
+============================================================ */
+.hero-banner {
+  background-color: #f2f0eb;
+  padding: 6rem 1rem;
+  text-align: center;
 }
 
+.hero-banner h1 {
+  font-size: 2.5rem;
+  color: #3e2d18;
+}
+
+.hero-banner p {
+  font-size: 1.25rem;
+  color: #5c3d1e;
+}
+
+/* ============================================================
+   CATEGORIE VISIVE CON BACKGROUND
+============================================================ */
+.category-block,
+.category-box {
+  min-height: 220px;
+  color: #fff;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-block:hover,
+.category-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.category-block h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.category-block p,
+.category-box p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Overlay per leggibilità */
+.category-block::before,
 .category-box::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.30); /* overlay scuro */
-}
-
-.category-box div {
-  position: relative; /* per stare sopra l'overlay */
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
   z-index: 1;
 }
 
-/* Sfondi specifici */
-.cat-opere  { background-image: url('/images/bg-opere.jpg'); }
-.cat-autori { background-image: url('/images/bg-autori.jpg'); }
-.cat-collezionisti { background-image: url('/images/bg-collezionisti.jpg'); }
-.cat-mappa { background-image: url('/images/bg-mappa.jpg'); }
-.cat-manoscritti { background-image: url('/images/bg-manoscritti.jpg'); }
+.category-content,
+.category-box div {
+  position: relative;
+  z-index: 2;
+}
 
+/* ============================================================
+   SFONDI SPECIFICI PER CATEGORIE
+============================================================ */
+.cat-opere           { background-image: url('/images/bg-opere.jpg'); }
+.cat-autori          { background-image: url('/images/bg-autori.jpg'); }
+.cat-collezionisti   { background-image: url('/images/bg-collezionisti.jpg'); }
+.cat-mappa           { background-image: url('/images/bg-mappa.jpg'); }
+.cat-manoscritti     { background-image: url('/images/bg-manoscritti.jpg'); }
+
+/* ============================================================
+   CARD & IMMAGINI
+============================================================ */
 .card-img-top {
   object-fit: cover;
   height: 200px;
 }
 
-/* Utilities */
+.card {
+  background-color: #fffaf3;
+  border: 1px solid #e2d8c3;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   STRUTTURA E UTILITÀ
+============================================================ */
 .text-center {
   text-align: center;
 }
@@ -138,6 +137,10 @@ section {
   padding: 0 1rem;
 }
 
+section {
+  padding: 4rem 0;
+}
+
 .bg-light {
   background-color: #ffffff !important;
 }
@@ -146,7 +149,9 @@ section {
   border-top: 1px solid #ddd;
 }
 
-/* Footer */
+/* ============================================================
+   FOOTER
+============================================================ */
 footer {
   font-size: 0.9rem;
   background-color: #f2f2f2;
@@ -154,4 +159,3 @@ footer {
   padding: 2rem 0;
   text-align: center;
 }
-
