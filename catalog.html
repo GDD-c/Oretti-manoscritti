@@ -23,4 +23,54 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="catalog.html">Catalogo</a></li>
-        <li class="nav-item"><a class="nav-link" href="browse.
+        <li class="nav-item"><a class="nav-link" href="browse.html">Esplora</a></li>
+        <li class="nav-item"><a class="nav-link" href="map.html">Mappa</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main content -->
+<main class="container py-5">
+  <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+    <div>
+      <h1>Catalogo delle Risorse</h1>
+      <p class="text-muted small mb-0">Filtra, ordina e cambia vista</p>
+    </div>
+    <div class="d-flex flex-wrap gap-2">
+      <input id="search" type="search" class="form-control" placeholder="Cerca per titolo…">
+      <select id="filter" class="form-select" aria-label="Filtra per tipologia">
+        <option value="">Tutte le tipologie</option>
+        <option value="manoscritto">Manoscritti</option>
+        <option value="autori">Autori</option>
+        <option value="collezionisti">Collezionisti</option>
+        <option value="opere">Opere d'arte</option>
+        <option value="luogo">Luoghi</option>
+      </select>
+      <select id="sort" class="form-select" aria-label="Ordina risultati">
+        <option value="title-asc">Titolo A→Z</option>
+        <option value="title-desc">Titolo Z→A</option>
+      </select>
+      <div class="btn-group" role="group" aria-label="Cambia vista">
+        <button id="btnGrid" class="btn btn-outline-secondary active" title="Vista griglia">Griglia</button>
+        <button id="btnList" class="btn btn-outline-secondary" title="Vista lista">Lista</button>
+      </div>
+    </div>
+  </div>
+
+  <p id="resultCount" class="small text-muted mb-3" aria-live="polite">—</p>
+  <div id="catalog-grid" class="row g-4" data-view="grid"></div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+  <div class="container">
+    <p class="mb-0 small">© 2025 – Collezioni Oretti | Biblioteca dell’Archiginnasio</p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="js/catalog.js" defer></script>
+</body>
+</html>
