@@ -5,6 +5,7 @@
     "tipo": "manoscritto",
     "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle collezioni private bolognesi, con note autografe di Oretti.",
     "link": "browse.html#b104"
+    "immagine": "images/b104.jpg"
   },
   {
     "id": "b109",
@@ -12,6 +13,7 @@
     "tipo": "manoscritto",
     "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle collezioni cittadine di Bologna.",
     "link": "browse.html#b109"
+    "immagine": "images/b109.jpg"
   },
   {
     "id": "b110",
@@ -19,7 +21,7 @@
     "tipo": "manoscritto",
     "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle ville e palazzi nobiliari suburbani bolognesi.",
     "link": "browse.html#b110"
-    "immagine": "images/b104.jpg"
+    "immagine": "images/b110.jpg"
   },
   {
     "id": "pepoli",
@@ -35,6 +37,7 @@
     "tipo": "collezionisti",
     "descrizione": "Collezionisti attivi a Bologna, citati in diversi passaggi del manoscritto B104.",
     "link": "catalog.html#zambeccari"
+    "immagine": "images/zambeccari.jpg"
   },
   {
     "id": "guercino",
@@ -42,6 +45,7 @@
     "tipo": "autori",
     "descrizione": "Giovanni Francesco Barbieri, detto il Guercino, autore di opere presenti in diverse collezioni bolognesi.",
     "link": "autori.html#guercino"
+    "immagine": "images/guercino.jpg"
   },
   {
     "id": "madonna-con-bambino",
@@ -49,6 +53,7 @@
     "tipo": "opere",
     "descrizione": "Opera attribuita a Guido Reni, conservata nella collezione Pepoli.",
     "link": "browse.html#madonna"
+    "immagine": "images/madonna.jpg"
   },
   {
     "id": "palazzo-pepoli",
@@ -56,6 +61,7 @@
     "tipo": "luogo",
     "descrizione": "Residenza della famiglia Pepoli, sede di una ricca collezione artistica.",
     "link": "map.html#pepoli"
+    "immagine": "images/pepoli.jpg"
   },
   {
     "id": "archiginnasio",
