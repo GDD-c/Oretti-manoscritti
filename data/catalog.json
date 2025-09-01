@@ -3,22 +3,23 @@
     "id": "b104",
     "titolo": "Manoscritto B104",
     "tipo": "manoscritto",
-    "descrizione": "Descrive opere conservate nelle collezioni private bolognesi, con note autografe di Oretti.",
+    "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle collezioni private bolognesi, con note autografe di Oretti.",
     "link": "browse.html#b104"
   },
   {
     "id": "b109",
     "titolo": "Manoscritto B109",
     "tipo": "manoscritto",
-    "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle chiese di Bologna.",
+    "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle collezioni cittadine di Bologna.",
     "link": "browse.html#b109"
   },
   {
     "id": "b110",
     "titolo": "Manoscritto B110",
     "tipo": "manoscritto",
-    "descrizione": "Inventario di opere nelle accademie e nei palazzi nobiliari bolognesi.",
+    "descrizione": "Contiene annotazioni su artisti, opere e committenti presenti nelle ville e palazzi nobiliari suburbani bolognesi.",
     "link": "browse.html#b110"
+    "immagine": "images/b104.jpg"
   },
   {
     "id": "pepoli",
@@ -26,6 +27,7 @@
     "tipo": "collezionisti",
     "descrizione": "Storica famiglia aristocratica bolognese, proprietaria di una vasta collezione d’arte nel XVIII secolo.",
     "link": "catalog.html#pepoli"
+    "immagine": "images/pepoli.jpg"
   },
   {
     "id": "zambeccari",
