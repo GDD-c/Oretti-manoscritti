@@ -1,7 +1,7 @@
 /* --- HERO BANNER --- */
 .hero-banner-ampio {
   min-height: 60vh;
-  background: url('../img/banner-oretti.jpg') center center / cover no-repeat;
+  background: url('../images/banner-oretti.jpg') center center / cover no-repeat;
   position: relative;
 }
 
