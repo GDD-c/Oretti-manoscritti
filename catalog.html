@@ -5,17 +5,70 @@
   <title>Catalogo - Collezioni Oretti</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Catalogo delle opere e collezioni documentate nei manoscritti di Oretti.">
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles -->
   <link rel="stylesheet" href="css/style-base.css">
+
+  <style>
+    body {
+      background-color: #f8f1e4;
+      color: #222;
+      font-family: 'Georgia', serif;
+    }
+
+    h1, h2, h3, .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      color: #3e2d18;
+    }
+
+    p, .lead, .text-muted {
+      font-family: 'Crimson Text', serif;
+      color: #5c3d1e;
+    }
+
+    .navbar {
+      background-color: #e2d8c3;
+    }
+
+    .btn-outline-secondary {
+      border-color: #5c3d1e;
+      color: #5c3d1e;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #5c3d1e;
+      color: #fff;
+    }
+
+    .card {
+      background-color: #fffaf3;
+      border: 1px solid #e2d8c3;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+    }
+
+    footer {
+      background-color: #f2f0eb;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light border-bottom">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Oretti Collection</a>
+    <a class="navbar-brand" href="index.html">Oretti – Collezioni d’Arte</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,8 +87,8 @@
 <main class="container py-5">
   <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
     <div>
-      <h1>Catalogo delle Risorse</h1>
-      <p class="text-muted small mb-0">Filtra, ordina e cambia vista</p>
+      <h1 class="mb-0">Catalogo delle Risorse</h1>
+      <p class="text-muted small">Filtra, ordina e cambia vista</p>
     </div>
     <div class="d-flex flex-wrap gap-2">
       <input id="search" type="search" class="form-control" placeholder="Cerca per titolo…">
@@ -59,13 +112,15 @@
   </div>
 
   <p id="resultCount" class="small text-muted mb-3" aria-live="polite">—</p>
-  <div id="catalog-grid" class="row g-4" data-view="grid"></div>
+  <div id="catalog-grid" class="row g-4" data-view="grid">
+    <!-- Risultati dinamici -->
+  </div>
 </main>
 
 <!-- Footer -->
-<footer class="bg-dark text-light text-center py-3 mt-5">
+<footer class="py-4 text-center border-top mt-5">
   <div class="container">
-    <p class="mb-0 small">© 2025 – Collezioni Oretti | Biblioteca dell’Archiginnasio</p>
+    <p class="mb-0 small">© 2025 – Collezioni Oretti · Biblioteca dell’Archiginnasio</p>
   </div>
 </footer>
 
