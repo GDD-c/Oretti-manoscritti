@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("catalog-grid");
-  const searchInput = document.getElementById("search");
-  const filterSelect = document.getElementById("filter");
-  const sortSelect = document.getElementById("sort");
+  const search = document.getElementById("search");
+  const filter = document.getElementById("filter");
+  const sort = document.getElementById("sort");
   const resultCount = document.getElementById("resultCount");
   const btnGrid = document.getElementById("btnGrid");
   const btnList = document.getElementById("btnList");
@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let items = [];
 
   fetch("data/catalog.json")
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("catalog.json non trovato");
+      return res.json();
+    })
     .then(data => {
       items = data;
       render(items);
+    })
+    .catch(err => {
+      grid.innerHTML = `<p class="text-danger">Errore: ${err.message}</p>`;
     });
 
   function render(list) {
@@ -21,51 +27,39 @@ document.addEventListener("DOMContentLoaded", function () {
     list.forEach(item => {
       const col = document.createElement("div");
       col.className = grid.dataset.view === "grid" ? "col-md-4" : "col-12";
-
       col.innerHTML = `
         <div class="card h-100 shadow-sm">
+          <img src="${item.immagine || 'img/default.jpg'}" class="card-img-top" alt="${item.titolo}" style="height:200px; object-fit:cover;">
           <div class="card-body">
             <h5 class="card-title">${item.titolo}</h5>
-            <p class="card-text">${item.descrizione}</p>
-            <a href="${item.link}" class="btn btn-outline-primary btn-sm">Vai alla scheda</a>
+            <p class="card-text small">${item.descrizione}</p>
+            <a href="${item.link}" class="btn btn-sm btn-outline-primary">Apri scheda</a>
           </div>
         </div>
       `;
       grid.appendChild(col);
     });
-
-    resultCount.textContent = `${list.length} risultato${list.length !== 1 ? 'i' : ''} trovati`;
+    resultCount.textContent = `${list.length} risultato${list.length !== 1 ? 'i' : ''}`;
   }
 
-  function filterAndSort() {
-    let filtered = [...items];
+  function update() {
+    let filtered = items;
 
-    // Filtro per tipologia
-    const tipo = filterSelect.value;
-    if (tipo) {
-      filtered = filtered.filter(i => i.tipo === tipo);
-    }
+    const q = search.value.trim().toLowerCase();
+    if (q) filtered = filtered.filter(i => i.titolo.toLowerCase().includes(q));
 
-    // Ricerca
-    const query = searchInput.value.toLowerCase();
-    if (query) {
-      filtered = filtered.filter(i => i.titolo.toLowerCase().includes(query));
-    }
+    if (filter.value) filtered = filtered.filter(i => i.tipo === filter.value);
 
-    // Ordinamento
-    const sort = sortSelect.value;
-    if (sort === "title-asc") {
-      filtered.sort((a, b) => a.titolo.localeCompare(b.titolo));
-    } else {
+    if (sort.value === "title-desc") {
       filtered.sort((a, b) => b.titolo.localeCompare(a.titolo));
+    } else {
+      filtered.sort((a, b) => a.titolo.localeCompare(b.titolo));
     }
 
     render(filtered);
   }
 
-  searchInput.addEventListener("input", filterAndSort);
-  filterSelect.addEventListener("change", filterAndSort);
-  sortSelect.addEventListener("change", filterAndSort);
+  [search, filter, sort].forEach(el => el.addEventListener("input", update));
 
   btnGrid.addEventListener("click", () => {
     grid.dataset.view = "grid";
