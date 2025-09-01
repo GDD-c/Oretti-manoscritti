@@ -122,6 +122,11 @@ section {
 .cat-mappa { background-image: url('/images/bg-mappa.jpg'); }
 .cat-manoscritti { background-image: url('/images/bg-manoscritti.jpg'); }
 
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
 /* Utilities */
 .text-center {
   text-align: center;
