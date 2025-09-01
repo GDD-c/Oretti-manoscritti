@@ -27,14 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = document.createElement("div");
             card.className = "col-md-6 col-lg-4";
             card.innerHTML = `
-              <div class="card h-100 shadow-sm">
-                <div class="card-body">
-                  <h5 class="card-title">${item.titolo}</h5>
-                  <p class="card-text small">${item.descrizione}</p>
-                  <a href="${item.link}" class="btn btn-sm btn-outline-primary">Apri scheda</a>
-                </div>
-              </div>
-            `;
+  <div class="card h-100 shadow-sm">
+    <img src="${item.immagine || 'img/default.jpg'}" class="card-img-top" alt="${item.titolo}">
+    <div class="card-body">
+      <h5 class="card-title">${item.titolo}</h5>
+      <p class="card-text small">${item.descrizione}</p>
+      <a href="${item.link}" class="btn btn-sm btn-outline-primary">Apri scheda</a>
+    </div>
+  </div>
+`;
             container.appendChild(card);
           });
         }
