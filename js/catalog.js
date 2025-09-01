@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => {
       grid.innerHTML = `<p class="text-danger">Errore: ${err.message}</p>`;
+      console.error(err);
     });
 
   function render(list) {
@@ -27,9 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
     list.forEach(item => {
       const col = document.createElement("div");
       col.className = grid.dataset.view === "grid" ? "col-md-4" : "col-12";
+
+      const imgSrc = item.immagine || "img/default.jpg";
+
       col.innerHTML = `
         <div class="card h-100 shadow-sm">
-          <img src="${item.immagine || 'img/default.jpg'}" class="card-img-top" alt="${item.titolo}" style="height:200px; object-fit:cover;">
+          <img src="${imgSrc}" class="card-img-top" alt="${item.titolo}" style="height:200px; object-fit:cover;">
           <div class="card-body">
             <h5 class="card-title">${item.titolo}</h5>
             <p class="card-text small">${item.descrizione}</p>
