@@ -34,12 +34,13 @@ a:hover {
   font-size: 1.25rem;
   color: white;
 }
-
-/* Fix specifico per hero-banner-ampio */
 .hero-banner-ampio h1,
 .hero-banner-ampio p {
   color: white !important;
+  z-index: 2;
+  position: relative;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
