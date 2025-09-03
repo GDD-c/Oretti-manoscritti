@@ -18,7 +18,7 @@ a {
   color: #5c3d1e;
   text-decoration: none;
 }
-a:hover {                 /* ← senza spazio */
+a:hover {
   text-decoration: underline;
 }
 
@@ -33,6 +33,12 @@ a:hover {                 /* ← senza spazio */
 .hero-banner p {
   font-size: 1.25rem;
   color: white;
+}
+
+/* Fix specifico per hero-banner-ampio */
+.hero-banner-ampio h1,
+.hero-banner-ampio p {
+  color: white !important;
 }
 
 /* Box categoria con immagine di sfondo */
@@ -53,19 +59,19 @@ a:hover {                 /* ← senza spazio */
   content:"";
   position:absolute;
   inset:0;
-  background: rgba(0,0,0,.45); /* overlay un po' più scuro per leggibilità */
+  background: rgba(0,0,0,.45);
 }
 .category-box > div{
   position: relative;
   z-index: 1;
 }
 
-/* Sfondi per categoria (CSS in /css -> immagini in /images) */
+/* Sfondi per categoria */
 .cat-opere        { background-image: url('../images/bg-opere.jpg'); }
 .cat-autori       { background-image: url('../images/bg-autori.jpg'); }
 .cat-collezionisti{ background-image: url('../images/bg-collezionisti.jpg'); }
 .cat-mappa        { background-image: url('../images/bg-mappa.jpg'); }
-.cat-manoscritti  { background-image: url('../images/bg-manoscritti.jpeg'); } /* ← estensione corretta */
+.cat-manoscritti  { background-image: url('../images/bg-manoscritti.jpeg'); }
 
 /* Hover leggero sui box */
 .category-box:hover{
@@ -121,5 +127,5 @@ footer {
   .category-box { height: 160px; }
 }
 
-/* Scroll fluido per "torna su" */
+/* Scroll fluido */
 html { scroll-behavior: smooth; }
